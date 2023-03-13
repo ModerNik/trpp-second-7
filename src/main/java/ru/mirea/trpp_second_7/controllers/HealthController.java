@@ -3,6 +3,7 @@ package ru.mirea.trpp_second_7.controllers;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
+import ru.mirea.trpp_second_7.entity.HealthResponse;
 
 /** Проверка состояния сервера. */
 @Controller()
@@ -15,6 +16,6 @@ public class HealthController {
      */
     @Get
     public HttpResponse<HealthResponse> healthCheck() {
-        return HttpResponse.ok(new HealthResponse("ok"));
+        return HttpResponse.ok(new HealthResponse());
     }
 }
